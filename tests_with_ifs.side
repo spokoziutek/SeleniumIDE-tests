@@ -1,0 +1,685 @@
+{
+  "id": "b623176f-2458-4a20-9fbd-eef10ae1c2a9",
+  "version": "2.0",
+  "name": "Testowanie",
+  "url": "https://www.google.com/",
+  "tests": [{
+    "id": "ac63f9de-ff57-494b-9503-36484b9c0e1b",
+    "name": "Wikipedia",
+    "commands": [{
+      "id": "9e98595d-d1c3-4a84-aecc-abccd213fa77",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/webhp?hl=pl&sa=X&ved=0ahUKEwjmgtPG0cKGAxVkHBAIHVCfA2UQPAgI",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3392d228-8e65-4af4-8990-ebb7a397dbb1",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "wikipedia"
+    }, {
+      "id": "1b6fe1dc-9e2c-4af8-b451-738e812b3a97",
+      "comment": "",
+      "command": "click",
+      "target": "name=btnK",
+      "targets": [
+        ["name=btnK", "name"],
+        ["css=center:nth-child(2) > .gNO89b", "css:finder"],
+        ["xpath=//input[@name='btnK']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1940e0d8-bb78-453d-a013-1b02c0ecc50b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tF2Cxc > .yuRUbf .LC20lb",
+      "targets": [
+        ["css=.tF2Cxc > .yuRUbf .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "048a676a-ef6e-47ff-873a-4f738edf92a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-ui-icon-search",
+      "targets": [
+        ["css=.mw-ui-icon-search", "css:finder"],
+        ["xpath=//div[@id='p-search']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e9d7123-421e-4b93-9ec5-9924ec85fabb",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.cdx-text-input__input", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4025e0dc-487e-4370-a74c-02bde39eb287",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.cdx-text-input__input", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Klawiatura"
+    }, {
+      "id": "f431941b-30c8-46fe-befd-24dee6d7df28",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#cdx-menu-item-1 > .cdx-menu-item__content",
+      "targets": [
+        ["css=#cdx-menu-item-1 > .cdx-menu-item__content", "css:finder"],
+        ["xpath=//li[@id='cdx-menu-item-1']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://pl.wikipedia.org/w/index.php?title=Special:Search&search=Klawiatura&wprov=acrw1_0')]", "xpath:href"],
+        ["xpath=//form/div/div/div[2]/ul/li/a", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "d92a5e0e-1c94-41e9-9d97-28ef4a75469c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#cdx-menu-item-1 .cdx-search-result-title__match",
+      "targets": [
+        ["css=#cdx-menu-item-1 .cdx-search-result-title__match", "css:finder"],
+        ["xpath=//li[@id='cdx-menu-item-1']/a/span[2]/span/bdi/span", "xpath:idRelative"],
+        ["xpath=//bdi/span", "xpath:position"]
+      ],
+      "value": "Klawiatura"
+    }, {
+      "id": "5f111971-8ead-46a1-95e5-c85699d380b8",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#cdx-menu-item-1 .cdx-search-result-title__match",
+      "targets": [
+        ["css=#cdx-menu-item-1 .cdx-search-result-title__match", "css:finder"],
+        ["xpath=//li[@id='cdx-menu-item-1']/a/span[2]/span/bdi/span", "xpath:idRelative"],
+        ["xpath=//bdi/span", "xpath:position"]
+      ],
+      "value": "firstPosition"
+    }, {
+      "id": "c9296600-41bd-4bd3-9d99-863a59565170",
+      "comment": "",
+      "command": "if",
+      "target": "${firstPosition} == 'Klawiatura'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11f49e7d-f1fe-49c7-9745-4f25ad9097da",
+      "comment": "",
+      "command": "store",
+      "target": "Klawiatura found",
+      "targets": [],
+      "value": "'headingStatus'"
+    }, {
+      "id": "42f44d7b-4587-4d7a-a5b5-9bf5717d00de",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6403b9b-c87b-46bd-8015-838e64f59658",
+      "comment": "",
+      "command": "store",
+      "target": "Klawiatura not found",
+      "targets": [],
+      "value": "'headingStatus'"
+    }, {
+      "id": "7ba73dc5-b210-44d7-b001-2e5536e57688",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44b57e4c-df59-4df9-b8b2-016964c663fb",
+      "comment": "",
+      "command": "assert",
+      "target": "'headingStatus'",
+      "targets": [],
+      "value": "Klawiatura found"
+    }]
+  }, {
+    "id": "69d082ae-368e-4784-abb7-3daa011d37b7",
+    "name": "XKom",
+    "commands": [{
+      "id": "86759fcf-1dd0-4743-8c5f-9d35740c6cb7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.x-kom.pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dab19bbe-d560-43a1-ab8e-8b9e2068ea5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-f30847bc-0",
+      "targets": [
+        ["css=.sc-f30847bc-0", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/header/div[2]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80f42abd-b908-458c-9403-08fb4969ec78",
+      "comment": "",
+      "command": "type",
+      "target": "css=.sc-f30847bc-0",
+      "targets": [
+        ["css=.sc-f30847bc-0", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/header/div[2]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "airtag"
+    }, {
+      "id": "5b579a4d-6cd7-433c-9d4d-122786374025",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-fzoLsD > .sc-AxgMl > svg",
+      "targets": [
+        ["css=.sc-fzoLsD > .sc-AxgMl > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdad9286-6433-4f99-8956-a1d4cc50cd97",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.sc-a052102a-0:nth-child(1) .sc-99fda726-0 > span",
+      "targets": [
+        ["css=.sc-a052102a-0:nth-child(1) .sc-99fda726-0 > span", "css:finder"],
+        ["xpath=//div[@id='listing-container']/div/div/div[2]/div[2]/div/a/h3/span", "xpath:idRelative"],
+        ["xpath=//h3/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Apple AirTag 1 sztuka')]", "xpath:innerText"]
+      ],
+      "value": "firstPosition"
+    }, {
+      "id": "1949f3bb-d500-42ec-bb9f-f9a77981d700",
+      "comment": "",
+      "command": "if",
+      "target": "${firstPosition} == 'Apple AirTag 1 sztuka'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05389f1d-9378-4bc8-ba64-a96740cb71c8",
+      "comment": "",
+      "command": "store",
+      "target": "Product found",
+      "targets": [],
+      "value": "'productStatus'"
+    }, {
+      "id": "1693231b-8723-4de9-a207-5549f82e33a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-a052102a-0:nth-child(1) .sc-3866c25b-0 .sc-fed3bfb7-0",
+      "targets": [
+        ["css=.sc-a052102a-0:nth-child(1) .sc-3866c25b-0 .sc-fed3bfb7-0", "css:finder"],
+        ["xpath=//div[@id='listing-container']/div/div/div[3]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dcbcd9b-3ae9-43dd-a4c7-ae25c1cee35c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fWHTGA",
+      "targets": [
+        ["css=.fWHTGA", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='react-portals']/div[10]/div/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Przejdź do koszyka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42cce52b-b8e8-4b89-818d-d6979c9c294a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.sc-f97118fc-3",
+      "targets": [
+        ["css=.sc-f97118fc-3", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div/div/div[2]/div[3]/div/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span[2]", "xpath:position"]
+      ],
+      "value": "price"
+    }, {
+      "id": "0bec6828-e471-40d2-99bf-ea18a46b4804",
+      "comment": "",
+      "command": "if",
+      "target": "${price} == '134,00 zł'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38efaa6b-ea14-4400-bcbb-e87326c5737b",
+      "comment": "",
+      "command": "store",
+      "target": "price is good",
+      "targets": [],
+      "value": "'priceStatus'"
+    }, {
+      "id": "183f185c-05ca-4561-95bc-8a7f6658159e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "831e7607-44b1-4c41-9c8e-f6e32c3d8a07",
+      "comment": "",
+      "command": "store",
+      "target": "price is not good",
+      "targets": [],
+      "value": "'priceStatus'"
+    }, {
+      "id": "8fd5c582-3815-464c-a378-685c2121cb5c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4808b0a5-63be-47fc-bec8-b22562104044",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fab205ff-764d-41c1-89dd-311ddea31b17",
+      "comment": "",
+      "command": "store",
+      "target": "Product not found",
+      "targets": [],
+      "value": "'productStatus'"
+    }, {
+      "id": "a10bfbab-bd99-4d3c-95fe-59dc6f2dbd79",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36181fbd-e941-4751-abeb-b9966454cc99",
+      "comment": "",
+      "command": "assert",
+      "target": "'priceStatus'",
+      "targets": [],
+      "value": "price is good"
+    }]
+  }, {
+    "id": "4c0bcaf2-1015-4991-b020-8cda9e6af7ab",
+    "name": "rowerowy",
+    "commands": [{
+      "id": "a359dfa6-e1a9-40da-a8bc-bb14f63a89d4",
+      "comment": "",
+      "command": "open",
+      "target": "https://rowerycube.pl/?gad_source=1&gclid=EAIaIQobChMI6PPy4t_ChgMV_k-RBR2ZACxVEAAYBCAAEgJCwvD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e850dde-a64b-4c13-9a60-d4793379fb97",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f36873d0-d197-4a37-953b-797e527d5a82",
+      "comment": "",
+      "command": "click",
+      "target": "id=leo_search_query_top",
+      "targets": [
+        ["id=leo_search_query_top", "id"],
+        ["name=search_query", "name"],
+        ["css=#leo_search_query_top", "css:finder"],
+        ["xpath=//input[@id='leo_search_query_top']", "xpath:attributes"],
+        ["xpath=//form[@id='leosearchtopbox']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db878839-958f-49c2-a17c-f9d7d1525f3c",
+      "comment": "",
+      "command": "store",
+      "target": "ROWER CUBE 601510 AIM SLX",
+      "targets": [],
+      "value": "var"
+    }, {
+      "id": "eedc85b7-003f-4b14-b16e-141ccfcc25a1",
+      "comment": "",
+      "command": "echo",
+      "target": "${var}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9624a2af-02eb-48d6-b4be-74e7a090daa6",
+      "comment": "",
+      "command": "type",
+      "target": "id=leo_search_query_top",
+      "targets": [],
+      "value": "${var}"
+    }, {
+      "id": "465cbaf1-bc69-4512-991e-b4b4b8ce05f6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=leo_search_query_top",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "85d38595-0dc8-4c51-bbd2-56585f2c2155",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-miniatures__media > img",
+      "targets": [
+        ["css=.product-miniatures__media > img", "css:finder"],
+        ["xpath=//img[@alt='Rower Cube 601510 Aim SLX']", "xpath:img"],
+        ["xpath=//div[@id='js-product-list']/div/div/div/div/article/div/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//article/div/div/div/div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98eca3e5-d1c0-4055-a1ca-7b2782c75b63",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.h1",
+      "targets": [
+        ["css=.h1", "css:finder"],
+        ["xpath=//section[@id='main']/div/div[2]/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "'bikeName'"
+    }, {
+      "id": "7fe8b8b5-55ab-4582-b8cc-36c533df6cc3",
+      "comment": "",
+      "command": "if",
+      "target": "'bikeName'",
+      "targets": [],
+      "value": "ROWER CUBE 601510 AIM SLX"
+    }, {
+      "id": "5fb398f3-ee21-4199-a60d-66442dc52e2a",
+      "comment": "",
+      "command": "store",
+      "target": "Bike found",
+      "targets": [],
+      "value": "'searchStatus'"
+    }, {
+      "id": "0ce546b9-ef1d-4cf5-8c9b-0179bf1d8ae4",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba7ec3b2-4ae1-4b48-8134-e297c25a08c3",
+      "comment": "",
+      "command": "store",
+      "target": "Bike not found",
+      "targets": [],
+      "value": "'searchStatus'"
+    }, {
+      "id": "97b1ca31-a37c-42cb-9f49-4abb83aa312b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f727a4d-787a-4a7b-a73d-706966b2b417",
+      "comment": "",
+      "command": "assert",
+      "target": "'searchStatus'",
+      "targets": [],
+      "value": "Bike found"
+    }]
+  }, {
+    "id": "bf6db34e-2e4a-44b8-8f97-37242cd86289",
+    "name": "Klawiatury",
+    "commands": [{
+      "id": "0ea859d5-9bb2-4a8e-bf92-a128258a1ca4",
+      "comment": "",
+      "command": "open",
+      "target": "https://klawiaturki.pl/?gad_source=1&gclid=EAIaIQobChMIhdGWq-XChgMVtBuiAx0yWwmjEAMYASAAEgJtFfD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74649516-fc1f-49b2-b51d-50a95124fea9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "141ae056-e170-49f4-9c7f-d22bb9d812f6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header_middle_content_nav .search .fa",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a507052-b97c-4260-91fd-0cd869790391",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header_middle_content_nav .input-field",
+      "targets": [
+        ["css=.header_middle_content_nav .input-field", "css:finder"],
+        ["xpath=(//input[@name='q'])[2]", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/section[4]/div/div/section/div/ul/li/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75c59589-9088-4e95-95b0-4f68692d4884",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header_middle_content_nav .input-field",
+      "targets": [],
+      "value": "GMK87"
+    }, {
+      "id": "7bbb5e4f-3ad6-4882-b4e4-c3a59c8a9a8f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header_middle_content_nav .search_dropdown .btn",
+      "targets": [
+        ["css=.header_middle_content_nav .search_dropdown .btn", "css:finder"],
+        ["xpath=(//input[@value='Szukaj'])[2]", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/section[4]/div/div/section/div/ul/li/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2c70ded-f2ee-4280-9941-e444d7f03d08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header_middle_content_nav .search_dropdown .btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb1275ee-6782-4d00-b8a8-f0d90a32c27d",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-xxs:nth-child(1) .core_priceFormat",
+      "targets": [
+        ["css=.col-xxs:nth-child(1) .core_priceFormat", "css:finder"],
+        ["xpath=//div[2]/span/span", "xpath:position"]
+      ],
+      "value": "price"
+    }, {
+      "id": "8e4ce703-4d23-4752-9eca-8fc1b7ff1caa",
+      "comment": "",
+      "command": "assert",
+      "target": "price",
+      "targets": [],
+      "value": "349,00 zł"
+    }, {
+      "id": "e098b835-8045-455d-9cbb-99fd6ec9a42d",
+      "comment": "",
+      "command": "if",
+      "target": "${price} == '349,00 zł'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00d1da43-15ec-4a0c-865c-0f8d879cb4d8",
+      "comment": "",
+      "command": "store",
+      "target": "true",
+      "targets": [],
+      "value": "'priceMatch'"
+    }, {
+      "id": "7fa976af-c926-4015-8279-2e58df3a529e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "273fff2d-08fc-4a96-9888-106885b38c46",
+      "comment": "",
+      "command": "store",
+      "target": "false",
+      "targets": [],
+      "value": "'priceMatch'"
+    }, {
+      "id": "e72a3a95-ab90-476f-89a8-3d0334187369",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "243d5f9e-91f3-490a-90c0-8a673316b722",
+      "comment": "",
+      "command": "assert",
+      "target": "'priceMatch'",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "64b6e91f-e336-4305-9511-38af8c863dd4",
+    "name": "Militaria",
+    "commands": [{
+      "id": "dff05daa-ea76-4c7c-a214-4e6257b43647",
+      "comment": "",
+      "command": "open",
+      "target": "https://militaria.pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b91209f5-6318-4ccc-a6e9-521d03a7cc9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.home_banner_image-slider > figure:nth-child(1) .pagebuilder-mobile-hidden",
+      "targets": [
+        ["css=.home_banner_image-slider > figure:nth-child(1) .pagebuilder-mobile-hidden", "css:finder"],
+        ["xpath=//img[contains(@src,'https://cdn.militaria.pl/media/wysiwyg/Militaria/banery/top-baner/PL/560x540_militaria_top-baner_samoobrona_pl.jpg')]", "xpath:img"],
+        ["xpath=//main[@id='maincontent']/div[2]/div/div[3]/div/figure/a/img", "xpath:idRelative"],
+        ["xpath=//figure/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e65c9ff-f0d5-48a6-8dac-6d5dae5a2118",
+      "comment": "",
+      "command": "click",
+      "target": "css=.category-item:nth-child(2) > .title-photo-wrapper img",
+      "targets": [
+        ["css=.category-item:nth-child(2) > .title-photo-wrapper img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://cdn.militaria.pl/media/catalog/category/7015_Gazy-pieprzowe_265x265.jpg')]", "xpath:img"],
+        ["xpath=//main[@id='maincontent']/div/ul/li[2]/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e634225-041d-4752-bda7-19eb5e644cef",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=Gaz pieprzowy Policyjny 50 ml - strumień",
+      "targets": [
+        ["linkText=Gaz pieprzowy Policyjny 50 ml - strumień", "linkText"],
+        ["css=.item:nth-child(1) .product-item-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Gaz pieprzowy Policyjny 50 ml - strumień')]", "xpath:link"],
+        ["xpath=//div[@id='layer-product-list']/div[2]/ol/li/div/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://militaria.pl/p/gaz-pieprzowy-policyjny-50-ml-strumien-3953')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gaz pieprzowy Policyjny 50 ml - strumień')]", "xpath:innerText"]
+      ],
+      "value": "firstResult"
+    }, {
+      "id": "c407cd51-a5fb-4b14-81d5-5f0be5afc5ee",
+      "comment": "",
+      "command": "if",
+      "target": "${firstResult} == \"Gaz pieprzowy Policyjny 50 ml - strumień\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ad61c24-5068-4b51-92cf-bf6c119f2b2b",
+      "comment": "",
+      "command": "store",
+      "target": "product found",
+      "targets": [],
+      "value": "'searchStatus'"
+    }, {
+      "id": "d6ac37dc-a9bc-429b-91a3-2d960484f1c6",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9feab377-0b4f-4da8-be56-483e14c61889",
+      "comment": "",
+      "command": "store",
+      "target": "product not found",
+      "targets": [],
+      "value": "'searchStatus'"
+    }, {
+      "id": "bc856b49-307a-4fb9-bc62-11110837c501",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a7416c0-aa8f-4b16-b463-c4163d5473d0",
+      "comment": "",
+      "command": "assert",
+      "target": "'searchStatus'",
+      "targets": [],
+      "value": "product found"
+    }]
+  }],
+  "suites": [{
+    "id": "ec8314e7-6dc9-4820-8be7-e996dca10442",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ac63f9de-ff57-494b-9503-36484b9c0e1b"]
+  }],
+  "urls": ["https://www.google.com/", "https://www.audi.pl/pl/web/pl.html", "https://www.x-kom.pl/"],
+  "plugins": []
+}

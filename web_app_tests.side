@@ -1,0 +1,858 @@
+{
+  "id": "047fd587-976a-41ef-ae11-e93d0045b1ac",
+  "version": "2.0",
+  "name": "zaliczenie",
+  "url": "https://store.steampowered.com/",
+  "tests": [{
+    "id": "7f7843c7-1bb0-4c42-9e0f-a69516a8147d",
+    "name": "test_checkResults",
+    "commands": [{
+      "id": "3ae40aaa-bfa1-4ec9-9cef-dd18432e02c5",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.steampowered.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d405b001-1a80-462d-9b30-8b47e2ae2811",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x830",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27a93385-aa97-4529-83f4-179c53884d92",
+      "comment": "",
+      "command": "click",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06a87d58-8c4f-405e-9b9e-b9e5f85c3596",
+      "comment": "",
+      "command": "type",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "minecraft dungeons"
+    }, {
+      "id": "9976067e-5ac4-4d53-afc2-47f1d021ddbc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c7e729d6-3289-4773-996e-cbbc65037081",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cyberpunk 2077')]", "xpath:innerText"]
+      ],
+      "value": "Minecraft Dungeons"
+    }, {
+      "id": "4643f8e5-d57b-4473-a991-b37c2faba49f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cyberpunk 2077')]", "xpath:innerText"]
+      ],
+      "value": "firstResult"
+    }, {
+      "id": "505d2638-39a1-416a-bdd5-d311453b0325",
+      "comment": "",
+      "command": "if",
+      "target": "${firstResult} == \"Minecraft Dungeons\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fc02342-33c2-402d-aa87-77778e030475",
+      "comment": "",
+      "command": "store",
+      "target": "product found",
+      "targets": [],
+      "value": "searchingProducts"
+    }, {
+      "id": "7af0da5e-8cac-45df-abeb-71c79d785eb5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Minecraft Dungeons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bea5da7-30c2-4670-ae33-adaa992fd3e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#btn_add_to_cart_594790 > span",
+      "targets": [
+        ["css=#btn_add_to_cart_594790 > span", "css:finder"],
+        ["xpath=//a[@id='btn_add_to_cart_594790']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dodaj do koszyka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bac7258f-5504-466a-b987-b85dc030083f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Primary",
+      "targets": [
+        ["css=.Primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Pokaż mój koszyk (1)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf448c88-e1d8-44eb-acf5-f84094e46e9e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "605b8e97-93fe-47b1-89f9-00d2e2eb3938",
+      "comment": "",
+      "command": "store",
+      "target": "product not found",
+      "targets": [],
+      "value": "searchingProducts"
+    }, {
+      "id": "0ed88d3b-1bcc-41d8-91a9-ff867395ed9b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8bd1822-a3ce-4aa7-91ad-36eb1f70d388",
+      "comment": "",
+      "command": "assert",
+      "target": "searchingProducts",
+      "targets": [],
+      "value": "product found"
+    }, {
+      "id": "4579e618-b038-42b0-9482-8cd050f11889",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_33j4SwfO2YH9eI6qV9BKaL",
+      "targets": [
+        ["css=.\\_33j4SwfO2YH9eI6qV9BKaL", "css:finder"],
+        ["xpath=//div[@id='page_root']/div[2]/div/div[2]/div[3]/div/div/div/div/div/div[2]/div[4]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "011de32a-4310-485c-83e9-d7daea2e83c9",
+    "name": "test_checkPrice",
+    "commands": [{
+      "id": "4cce93cd-a7f6-4190-9c76-64eff928c3d9",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.steampowered.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "caaffaf4-49c6-4d0c-9368-3fd6bff8c668",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x830",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8eb92fb-a63b-4866-be64-83e3187a48d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d109ec3-bd6b-46fa-9ddf-73583e0b2974",
+      "comment": "",
+      "command": "type",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "cyberpunk"
+    }, {
+      "id": "1ff8665d-b672-4a63-9868-1828756e71f2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7629dc56-8c63-4d90-b16e-c0a92fdc76be",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.search_result_row:nth-child(1) .discount_final_price",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .discount_final_price", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div[4]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "price"
+    }, {
+      "id": "64c1fca1-7149-4b58-a60c-ada0754f0a80",
+      "comment": "",
+      "command": "if",
+      "target": "${price} == \"199,00 zł\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24288c16-22f0-428e-a701-ac70fc248cab",
+      "comment": "",
+      "command": "store",
+      "target": "Price is good",
+      "targets": [],
+      "value": "priceCheck"
+    }, {
+      "id": "cf9537aa-d6c1-48d8-906b-6d8b0e9eee24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cyberpunk 2077')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "117ec87f-c467-4781-8f92-46c0484aa21f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e34d06ff-feb1-485f-b0a6-a4a9679fbb15",
+      "comment": "",
+      "command": "store",
+      "target": "Price is not good",
+      "targets": [],
+      "value": "priceCheck"
+    }, {
+      "id": "f67a65ab-69c2-4f4a-af9f-fd393c16ffad",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "689dd24f-0464-4721-88b6-c2dce819dc70",
+      "comment": "",
+      "command": "if",
+      "target": "selenium.isElementPresent(\"css=.main_content_ctn\")",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af05e205-340c-43e6-b904-04441895af99",
+      "comment": "",
+      "command": "select",
+      "target": "id=ageYear",
+      "targets": [
+        ["id=ageYear", "id"],
+        ["name=ageYear", "name"],
+        ["css=#ageYear", "css:finder"],
+        ["xpath=//select[@id='ageYear']", "xpath:attributes"],
+        ["xpath=//div[@id='app_agegate']/div/div[2]/select[3]", "xpath:idRelative"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "eecaa416-100f-45ef-94f1-b63b1ae557af",
+      "comment": "",
+      "command": "click",
+      "target": "css=#view_product_page_btn > span",
+      "targets": [
+        ["css=#view_product_page_btn > span", "css:finder"],
+        ["xpath=//a[@id='view_product_page_btn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pokaż stronę')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9c36439-71d6-4fef-884f-5657bbc320c5",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c701c913-d4ba-48e6-bd76-fc7fad37a8ab",
+      "comment": "",
+      "command": "store",
+      "target": "Disclaimer not present",
+      "targets": [],
+      "value": "disclaimerCheck"
+    }, {
+      "id": "31ccaca4-23b5-4b08-af9e-dd0ed62a7bb7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfc444b5-e376-44bd-9b35-34a20072f0b0",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ba279632-fee5-45e2-9d2f-cc106d8461a5",
+    "name": "test_wrongLoginCredentials",
+    "commands": [{
+      "id": "790366ab-f614-443d-bc2b-2fee01479988",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2908e873-6fef-4422-a07f-795964e0b806",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x830",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fba0a79b-b5a5-4e03-848c-a691e21c12c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(1) > .\\_2eKVn6g5Yysx9JmutQe7WV",
+      "targets": [
+        ["css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(1) > .\\_2eKVn6g5Yysx9JmutQe7WV", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77bc291a-c756-4224-85f7-f49925bc7f2b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(1) > .\\_2eKVn6g5Yysx9JmutQe7WV",
+      "targets": [
+        ["css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(1) > .\\_2eKVn6g5Yysx9JmutQe7WV", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "b6dab2fc-408a-4bf9-8bda-fc05e3d6f3d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(2) > .\\_2eKVn6g5Yysx9JmutQe7WV",
+      "targets": [
+        ["css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(2) > .\\_2eKVn6g5Yysx9JmutQe7WV", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c8e13f8-eefb-429d-ae77-0c113128d9e0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(2) > .\\_2eKVn6g5Yysx9JmutQe7WV",
+      "targets": [
+        ["css=.\\_2KXGKToxF6BG65rXNZ-mJX:nth-child(2) > .\\_2eKVn6g5Yysx9JmutQe7WV", "css:finder"],
+        ["xpath=(//input[@value='test'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "58cc4980-22cf-4a32-bfd9-64201ca28420",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_2QgFEj17t677s3x299PNJQ",
+      "targets": [
+        ["css=.\\_2QgFEj17t677s3x299PNJQ", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Zaloguj się')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b88de581-015c-4fce-bd6d-050328eca4bf",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.\\_1Mcy9wnDnt1Q72FijsNtHC",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28e416f0-19eb-4e41-9641-80828bc7e5c2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pomocy, nie mogę się zalogować",
+      "targets": [
+        ["linkText=Pomocy, nie mogę się zalogować", "linkText"],
+        ["css=.\\_1cnUQ3RrQgqaLodJp0Ljnt:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pomocy, nie mogę się zalogować')]", "xpath:link"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://help.steampowered.com/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3D%26redir_ssl%3D1%26snr%3D1_4_4__global-header')]", "xpath:href"],
+        ["xpath=//form/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pomocy, nie mogę się zalogować')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d619a4d5-2d3f-4879-a8f8-2db102aac43c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.help_wizard_button:nth-child(2) > span",
+      "targets": [
+        ["css=.help_wizard_button:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='wizard_contents']/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nie pamiętam nazwy lub hasła do mojego konta Steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3544493f-8463-4659-8a10-730ce7f15afe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account_recovery_submit > input",
+      "targets": [
+        ["css=.account_recovery_submit > input", "css:finder"],
+        ["xpath=//input[@value='Szukaj']", "xpath:attributes"],
+        ["xpath=//form[@id='forgot_login_search_form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "410f670a-57d5-4ffd-ad5d-46eb2e440717",
+      "comment": "",
+      "command": "if",
+      "target": "selenium.isElementPresent(\"id=form_submit_error\")",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2d986f2-99f4-4019-8e68-73335e59bac1",
+      "comment": "",
+      "command": "store",
+      "target": "Error is present",
+      "targets": [],
+      "value": "checkError"
+    }, {
+      "id": "cfc50afe-0843-4ea6-ad0f-f7578880c1fa",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6bc01ff-3282-445a-9ba7-f3bb8f016ede",
+      "comment": "",
+      "command": "store",
+      "target": "Error is not present",
+      "targets": [],
+      "value": "checkError"
+    }, {
+      "id": "9badcb63-02c9-464b-873a-5d0edeb30ea9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f342610-d89c-4850-972c-6805f1f7b197",
+      "comment": "",
+      "command": "assert",
+      "target": "checkError",
+      "targets": [],
+      "value": "Error is present"
+    }]
+  }, {
+    "id": "662040cd-1ffc-4599-903d-860937483de8",
+    "name": "test_pageContent_ifUserLoggedOut",
+    "commands": [{
+      "id": "99acc893-df04-4b21-b472-858d47f4bfbe",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.steampowered.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4caf8f57-ccbe-4663-817e-814353662467",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc5fef49-b164-4108-b549-7ef398881298",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tab:nth-child(10)>span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1a90dd1-c4a3-4469-b679-c100f6e4c54a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Wypróbuj eksperyment „DLC dla ciebie”",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4f89cf5-8e78-4c5b-9dc6-c12a03a5eaba",
+      "comment": "",
+      "command": "if",
+      "target": "div=\"_3FRxVBrTtFQLhmHRstBbC_SaleSectionHeader\"",
+      "targets": [],
+      "value": "NA TWOJEJ LIŚCIE ŻYCZEŃ"
+    }, {
+      "id": "284d1ea1-9d28-4af2-bc51-4ad70c02e0ef",
+      "comment": "",
+      "command": "store",
+      "target": "Zaloguj się",
+      "targets": [],
+      "value": "var"
+    }, {
+      "id": "d320ba69-1d62-461f-8c90-1397280538d6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50ad5992-b4f6-42db-b780-9d6e79645be1",
+      "comment": "",
+      "command": "if",
+      "target": "button=\"_1wBKC1RMZHg8aznpO6I_gR\"",
+      "targets": [
+        ["css=.\\_1wBKC1RMZHg8aznpO6I_gR", "css:finder"],
+        ["xpath=//div[@id='SaleSection_86829']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": "${var}"
+    }, {
+      "id": "1bfb7ace-49a8-4980-85d3-618f0d951aaa",
+      "comment": "",
+      "command": "echo",
+      "target": "Weryfikacja zalogowania działa poprawnie, niezalogowany użytkownik nie ma dostępu do całej zawartości strony",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ba6b555-0b10-4aa6-8f4e-4edc39a680d8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "84327a52-a985-44af-8dba-cdd5b58c2d1d",
+    "name": "test_checkLanguageSupportForTitle",
+    "commands": [{
+      "id": "44028174-1a2e-48f1-8ed8-1e580ca37ca0",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.steampowered.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d80bcc5-37fe-464a-af5c-674ecb1e5b0d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8213ced7-004b-4577-989e-643f95cf2128",
+      "comment": "",
+      "command": "click",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb3bb736-6205-469a-b0f5-77cb91466f2c",
+      "comment": "",
+      "command": "type",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "forbidden"
+    }, {
+      "id": "bc05a11c-7580-47d6-a644-a01b18a73799",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "8828d6e3-2311-44dc-81d8-4d3aa48e7ecd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [
+        ["css=.search_result_row:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='search_resultsRows']/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/a/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Horizon Forbidden West™ Edycja kompletna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00dd4153-5ea1-4035-80a8-1dc07bdd0231",
+      "comment": "",
+      "command": "if",
+      "target": "selenium.isElementPresent(\"css=.main_content_ctn\")",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23cbd7a8-c3a9-4697-a808-a1ba909b1a59",
+      "comment": "",
+      "command": "select",
+      "target": "id=ageYear",
+      "targets": [
+        ["id=ageYear", "id"],
+        ["name=ageYear", "name"],
+        ["css=#ageYear", "css:finder"],
+        ["xpath=//select[@id='ageYear']", "xpath:attributes"],
+        ["xpath=//div[@id='app_agegate']/div/div[2]/select[3]", "xpath:idRelative"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "89f46259-54b2-4b6e-a338-fb0f692cf1b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#view_product_page_btn > span",
+      "targets": [
+        ["css=#view_product_page_btn > span", "css:finder"],
+        ["xpath=//a[@id='view_product_page_btn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pokaż stronę')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46227f24-7a2b-441c-b9af-d70b759a248f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67fb3cbd-e1d3-4caa-ab0d-1479f4b0e4a1",
+      "comment": "",
+      "command": "store",
+      "target": "Disclaimer not present",
+      "targets": [],
+      "value": "disclaimerCheck"
+    }, {
+      "id": "0a6b4820-27ce-4011-a11b-0f897c82b7a7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "443be4ce-0ce7-4e91-86fe-c750a57b9844",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Wyświetl wszystkie obsługiwane języki (25)",
+      "targets": [
+        ["linkText=Wyświetl wszystkie obsługiwane języki (25)", "linkText"],
+        ["css=.all_languages", "css:finder"],
+        ["xpath=//a[contains(text(),'Wyświetl wszystkie obsługiwane języki (25)')]", "xpath:link"],
+        ["xpath=//a[@onclick='return ShowAllLanguages( this )']", "xpath:attributes"],
+        ["xpath=//div[@id='languageTable']/a", "xpath:idRelative"],
+        ["xpath=//div[9]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Wyświetl wszystkie obsługiwane języki (25)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb92cc8b-f9bb-4f48-89f2-3beb10e113ea",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class='game_language_options']/tbody/tr",
+      "targets": [],
+      "value": "rowCount"
+    }, {
+      "id": "1c5c88e6-d444-4c5a-95e8-1d0b0cf7312e",
+      "comment": "",
+      "command": "store",
+      "target": "2",
+      "targets": [],
+      "value": "rowIndex"
+    }, {
+      "id": "37cace7b-d17b-404f-9238-fbcc83ced6d4",
+      "comment": "",
+      "command": "while",
+      "target": "${rowIndex}<=${rowCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4961d6a1-cac2-4630-a8dd-762a0613b7b7",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class='game_language_options']/tbody/tr[${rowIndex}]/td[@class='checkcol']/span[text()='✔']",
+      "targets": [],
+      "value": "spanCount"
+    }, {
+      "id": "8c6b5819-3cb7-4bd5-a384-ed8ff937fe0e",
+      "comment": "",
+      "command": "if",
+      "target": "${spanCount}==3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1b2c10c-61f2-46f8-bb9a-92d190ffdef4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class='game_language_options']/tbody/tr[${rowIndex}]/td[1]",
+      "targets": [],
+      "value": "firstColumnText"
+    }, {
+      "id": "f9562fc3-ca8d-4de9-a456-e635ecba00a4",
+      "comment": "",
+      "command": "echo",
+      "target": "Pełne wsparcie językowe: ${firstColumnText}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "591dbd13-859a-45b9-a4c8-09246016045a",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f7f6257-0849-4538-85b7-8724c95102e8",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(${rowIndex}) > .ellipsis",
+      "targets": [
+        ["css=tr:nth-child(3) > .ellipsis", "css:finder"],
+        ["xpath=//div[@id='languageTable']/table/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Angielski')]", "xpath:innerText"]
+      ],
+      "value": "firstColumnText"
+    }, {
+      "id": "6dc42a1d-b6e9-40be-be56-14ca24207226",
+      "comment": "",
+      "command": "echo",
+      "target": "Brak pełnego wsparcia językowego: ${firstColumnText}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa04465b-4149-4dd9-a3cf-61ed73390992",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "949bf247-a022-4232-9fd6-93759e1bc291",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${rowIndex})+1;",
+      "targets": [],
+      "value": "rowIndex"
+    }, {
+      "id": "5a911665-2c2d-455f-8502-1ae0cb01cd90",
+      "comment": "",
+      "command": "echo",
+      "target": "____________________________________________",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d7d362b-2828-4cb3-9200-ff309377cfdb",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "380cb4c6-0737-4fbd-a17e-ed8617a22585",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7f7843c7-1bb0-4c42-9e0f-a69516a8147d"]
+  }],
+  "urls": ["https://www.google.com/", "https://store.steampowered.com/", "https://steamcommunity.com/"],
+  "plugins": []
+}
